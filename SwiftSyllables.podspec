@@ -9,34 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftSyllables'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftSyllables.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A lightweight syllable counter written in Swift.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Simple syllable counter written in Swift using a combination of dictionary lookups and heuristic solution. Uses the CMU Pronunciation Dictionary which contains pronounciation transcriptions for over 100,000 words. If the word is found within the pronunciation dictionary, the first valid pronunciation is used to find the number of syllables. If the word is not found within the pronunciation dictionary, SwiftSyllables defaults to a heuristic solution. We used a straightforward implementation of Emre Aydin's heuristic syllable counting algorithm (http://eayd.in/?p=232).
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SwiftSyllables'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/vivqu/SwiftSyllables'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Vivian Qu' => 'elizabeth.v.qu@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SwiftSyllables.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/vivqu/SwiftSyllables.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/vivqu'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SwiftSyllables/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SwiftSyllables' => ['SwiftSyllables/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

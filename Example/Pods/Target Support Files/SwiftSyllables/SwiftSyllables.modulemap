@@ -1,0 +1,6 @@
+framework module SwiftSyllables {
+  umbrella header "SwiftSyllables-umbrella.h"
+
+  export *
+  module * { export * }
+}

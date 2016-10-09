@@ -1,29 +1,52 @@
 import UIKit
 import XCTest
-import SwiftSyllables
+@testable import SwiftSyllables
 
-class Tests: XCTestCase {
-    
+class SwiftSyllablesTest : XCTestCase {
+
     override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        SwiftSyllables.mainBundle = Bundle(for: type(of:self))
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+
+    func testSingleLetter() {
+        let vowels = ["a", "e", "i", "o", "u"]
+        for vowel in vowels {
+            let syllables : Int = SwiftSyllables.getSyllables(vowel)
+            XCTAssertEqual(syllables, 1)
         }
+
+        let consonants = ["x", "y", "z", "b", "g"]
+        for letter in consonants {
+            let syllables : Int = SwiftSyllables.getSyllables(letter)
+            XCTAssertEqual(syllables, 1)
+        }
+
+        // Special case for w (pronounced "double-you")
+        XCTAssertEqual(SwiftSyllables.getSyllables("w"), 3)
     }
-    
+
+    func testInvalidWords() {
+        // Empty string
+        XCTAssertEqual(SwiftSyllables.getSyllables(""), 0)
+
+        // Whitespaces
+        XCTAssertEqual(SwiftSyllables.getSyllables("     "), 0)
+
+        // Invalid characters
+        XCTAssertEqual(SwiftSyllables.getSyllables("!@%,,,"), 0)
+    }
+
+    func DISABLED_testNumbers() {
+        // Numbers
+        XCTAssertEqual(SwiftSyllables.getSyllables("1"), 0)
+        XCTAssertEqual(SwiftSyllables.getSyllables("123"), 0)
+    }
+
+    func testRealWords() {
+        XCTAssertEqual(SwiftSyllables.getSyllables("Testing"), 2)
+    }
+
+    func testNonRealWords() {
+        XCTAssertEqual(SwiftSyllables.getSyllables("lalala"), 3)
+    }
 }
