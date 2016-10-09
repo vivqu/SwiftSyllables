@@ -45,7 +45,7 @@ open class SwiftSyllables {
         if self.syllableDict.count == 0 {
             // Read pronunciation dictionary from bundle
             let fileName : String = "cmudict"
-            var podBundle : Bundle = Bundle(for: self)
+            let podBundle : Bundle = Bundle(for: self)
             if let bundleURL = podBundle.url(forResource: "CMUDict", withExtension: "bundle") {
                 if let bundle = Bundle(url: bundleURL) {
                     let resourcePath = bundle.path(forResource: fileName, ofType: nil)
@@ -58,7 +58,11 @@ open class SwiftSyllables {
                         if let processedDict = dict as? [String : Int] {
                             self.syllableDict = processedDict
                         }
+                    } else {
+                        assertionFailure("Could not find data")
                     }
+                } else {
+                    assertionFailure("Could not load the bundle")
                 }
             }
         }
