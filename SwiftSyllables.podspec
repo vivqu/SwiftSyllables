@@ -25,4 +25,6 @@ Simple syllable counter written in Swift using a combination of dictionary looku
 
   s.source_files = 'SwiftSyllables/Classes/**/*'
 
+  s.resource_bundles = { 'CMUDict' => ['SwiftSyllables/Assets/cmudict'] }
+
 end

@@ -9,9 +9,6 @@
 import Foundation
 
 open class SwiftSyllables {
-    private static let fileName : String = "cmudict"
-    private static let resourcePath = mainBundle.path(forResource: fileName, ofType: nil)
-    internal static var mainBundle : Bundle = Bundle.main
 
     // Static variable for syllable dictionary
     static var syllableDict : [String: Int] = [String: Int]()
@@ -47,17 +44,23 @@ open class SwiftSyllables {
     fileprivate class func configureSyllableDict() -> [String : Int]? {
         if self.syllableDict.count == 0 {
             // Read pronunciation dictionary from bundle
-            guard let path = resourcePath else { return nil }
-            let data : NSMutableData? = NSMutableData.init(contentsOfFile: path)
-            if let foundData = data {
-                let unarchiver : NSKeyedUnarchiver = NSKeyedUnarchiver.init(forReadingWith: foundData as Data)
-                let dict : Any? = unarchiver.decodeObject(forKey: "cmudict")
-                unarchiver.finishDecoding()
-                if let processedDict = dict as? [String : Int] {
-                    self.syllableDict = processedDict
+            let fileName : String = "cmudict"
+            var podBundle : Bundle = Bundle(for: self)
+            if let bundleURL = podBundle.url(forResource: "CMUDict", withExtension: "bundle") {
+                if let bundle = Bundle(url: bundleURL) {
+                    let resourcePath = bundle.path(forResource: fileName, ofType: nil)
+                    guard let path = resourcePath else { return nil }
+                    let data : NSMutableData? = NSMutableData.init(contentsOfFile: path)
+                    if let foundData = data {
+                        let unarchiver : NSKeyedUnarchiver = NSKeyedUnarchiver.init(forReadingWith: foundData as Data)
+                        let dict : Any? = unarchiver.decodeObject(forKey: "cmudict")
+                        unarchiver.finishDecoding()
+                        if let processedDict = dict as? [String : Int] {
+                            self.syllableDict = processedDict
+                        }
+                    }
                 }
             }
-
         }
         return self.syllableDict
     }

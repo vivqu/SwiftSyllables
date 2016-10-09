@@ -4,10 +4,6 @@ import XCTest
 
 class SwiftSyllablesTest : XCTestCase {
 
-    override func setUp() {
-        SwiftSyllables.mainBundle = Bundle(for: type(of:self))
-    }
-
     func testSingleLetter() {
         let vowels = ["a", "e", "i", "o", "u"]
         for vowel in vowels {
