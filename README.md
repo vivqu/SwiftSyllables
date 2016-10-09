@@ -9,8 +9,6 @@ A lightweight syllable counter written in Swift.
 
 ## Background
 
-The original motivation that drove the creation of SwiftSyllables was for poetic reasons...literally. There was no other easily available syllable counting framework for iOS apps unlike the extensive capabilities available in other languages like Python.
-
 Syllable counting does not have a simple algorithmic solution so this framework takes a combination of dictionary lookups and heuristics, in two parts:
 
 (1) Python's [Natural Language Toolkit](http://www.nltk.org/) includes a wide range of corpus for language processing. Python NLTK takes advantage of the [CMU Pronunciation Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) which contains pronounciation transcriptions for over 100,000 words. If the word is found within the pronunciation dictionary, the first valid pronunciation is used to find the number of syllables.
