@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftSyllables'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A lightweight syllable counter written in Swift.'
 
   s.description      = <<-DESC
@@ -25,6 +25,6 @@ Simple syllable counter written in Swift using a combination of dictionary looku
 
   s.source_files = 'SwiftSyllables/Classes/**/*'
 
-  s.resource_bundles = { 'CMUDict' => ['SwiftSyllables/Assets/cmudict'] }
+  s.resource_bundles = { 'CMUDict' => ['SwiftSyllables/Assets/**/cmudict'] }
 
 end
