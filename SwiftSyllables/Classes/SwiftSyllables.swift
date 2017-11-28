@@ -24,10 +24,10 @@ open class SwiftSyllables {
         tagger.string = text
 
         var validWords: [String] = []
-        tagger.enumerateTags(in: NSMakeRange(0, text.characters.count), scheme:scheme, options: taggerOptions) {
+        tagger.enumerateTags(in: NSMakeRange(0, text.count), scheme:scheme, options: taggerOptions) {
             tag, tokenRange, _, _ in let string = (text as NSString).substring(with: tokenRange)
             if tag == "Word" {
-                if let firstChar = string.characters.first {
+                if let firstChar = string.first {
                     if firstChar != "\'" {
                         // Exclude words that start with an apostraphe
                         validWords.append(string)

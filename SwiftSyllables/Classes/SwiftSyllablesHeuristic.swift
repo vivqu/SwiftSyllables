@@ -39,11 +39,11 @@ class SwiftSyllablesHeuristic {
             options: [.caseInsensitive])
         return regex.numberOfMatches(in: string,
             options: NSRegularExpression.MatchingOptions.reportCompletion,
-            range: NSMakeRange(0, string.characters.count))
+            range: NSMakeRange(0, string.count))
     }
 
     fileprivate class func rangeForIndex(_ string: String, index: Int) -> String.Index? {
-        if (abs(index) >= string.characters.count) {
+        if (abs(index) >= string.count) {
             return nil
         }
         var beginIndex: String.Index = string.startIndex
@@ -54,7 +54,7 @@ class SwiftSyllablesHeuristic {
     }
 
     fileprivate class func substringAtIndex(_ string: String, index: Int) -> String? {
-        if (abs(index) >= string.characters.count) {
+        if (abs(index) >= string.count) {
             return nil
         }
         if let index = rangeForIndex(string, index: index) {
@@ -71,7 +71,7 @@ class SwiftSyllablesHeuristic {
         let numDoubleVowels: Int = applyRegex(baseWord, pattern: "[eaoui][eaoui]")
 
         // (1) if letters < 3, return 1
-        let stringLength = baseWord.characters.count
+        let stringLength = baseWord.count
         if stringLength < 3 { return stringLength > 0 ? 1 : 0 }
 
         // (2) if letters don't end with ["ted", "tes", "ses", "ied", "ies"], then
@@ -95,7 +95,7 @@ class SwiftSyllablesHeuristic {
         }
 
         // (3) Discard trailing "e", except where ending is "le"
-        guard let lastChar = baseWord.characters.last else { return 0 }
+        guard let lastChar = baseWord.last else { return 0 }
         if lastChar == "e" && last2CharsSubstring != "le" {
             discardedSyllables += 1
         } else if SwiftSyllablesHeuristicExceptions.leEndings.contains(baseWord) {
@@ -143,7 +143,7 @@ class SwiftSyllablesHeuristic {
         }
 
         // (10) If ends with "-ian", should be counted as two syllables, except for "-tian" and "-cian"
-        if last3CharsSubstring == "ian" && baseWord.characters.count >= 4 {
+        if last3CharsSubstring == "ian" && baseWord.count >= 4 {
             if let index = rangeForIndex(baseWord, index: -4) {
                 let fourthLastCharacter = baseWord[index]
                 syllables += (fourthLastCharacter == "c" || fourthLastCharacter == "t") ? 0 : 1
