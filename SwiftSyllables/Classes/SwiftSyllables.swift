@@ -24,9 +24,9 @@ open class SwiftSyllables {
         tagger.string = text
 
         var validWords: [String] = []
-        tagger.enumerateTags(in: NSMakeRange(0, text.count), scheme:scheme, options: taggerOptions) {
+        tagger.enumerateTags(in: NSMakeRange(0, text.count), scheme:NSLinguisticTagScheme(rawValue: scheme), options: taggerOptions) {
             tag, tokenRange, _, _ in let string = (text as NSString).substring(with: tokenRange)
-            if tag == "Word" {
+            if tag!.rawValue == "Word" {
                 if let firstChar = string.first {
                     if firstChar != "\'" {
                         // Exclude words that start with an apostraphe
@@ -77,7 +77,7 @@ open class SwiftSyllables {
 
         // Tokenize the string and read from the corpus
         var countSyllables = 0
-        let taggedWords : [String] = self.validWords(string, scheme: NSLinguisticTagSchemeTokenType)
+        let taggedWords : [String] = self.validWords(string, scheme: NSLinguisticTagScheme.tokenType.rawValue)
         for word : String in taggedWords {
             let upperCase = word.uppercased()
             if let syllables = syllableDict[upperCase] {
