@@ -126,7 +126,7 @@ class SwiftSyllablesHeuristic {
             let nextIndex = baseWord.index(checkIndex, offsetBy: 1)
             if baseWord[nextIndex] == "y" {
                 // Check following index
-                if (nextIndex.encodedOffset == stringLength - 1) {
+                if (nextIndex.utf16Offset(in: baseWord) == stringLength - 1) {
                     break
                 }
                 let finalIndex = baseWord.index(nextIndex, offsetBy: 1)
