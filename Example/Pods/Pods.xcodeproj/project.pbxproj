@@ -7,26 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50C14D4365E3359F78A3EEFD1C738999 /* cmudict in Resources */ = {isa = PBXBuildFile; fileRef = 616F8771B07EF378FEBC06FC262C48EE /* cmudict */; };
 		5DF4E5A61944F2B7962B8114CB5F36A2 /* SwiftSyllablesHeuristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D2F00331FA6D8CA4A28CB5CEF38AE /* SwiftSyllablesHeuristic.swift */; };
 		853A5D1C4DE6E12E7E05CE943E1441D1 /* SwiftSyllables-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7263BE52EFFC497103D661C8FF8D352 /* SwiftSyllables-dummy.m */; };
 		AABA177DBFFB27CC1670C1783364E22A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		AC25FE242D0AE0FF8E68D132B47234A3 /* Pods-SwiftSyllables_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A2B41CA6C354419970EDEE5B6522 /* Pods-SwiftSyllables_Tests-dummy.m */; };
 		BE64C8D1AEBEF242B5B3982B4F39AD75 /* Pods-SwiftSyllables_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B20FFA6503FA926822F20D2294B3AC6E /* Pods-SwiftSyllables_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CECA9F07FCBC41D09043C6610CD25F25 /* CMUDict.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19437EE43BA8B4777CBD68788A784B2A /* CMUDict.bundle */; };
 		CF76AFACC6EA3BC07462D07DF6C00171 /* SwiftSyllables-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39041E0DA7D4BFAE843C8A9AFBEBE6F1 /* SwiftSyllables-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF9B9FC03FF349D262E0AB2F761DC688 /* SwiftSyllables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAB09CBD50EEA571102005EFAC3596 /* SwiftSyllables.swift */; };
 		F6891E8B055F813A0C562F876AEB5DF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8FFDE8B25B9BEFF8FAA24EC370DFF14D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 72E9091BA683B7EAC46076C8BFAFB0FD;
-			remoteInfo = "SwiftSyllables-CMUDict";
-		};
 		A54BBDF16011CD7A875DEBA5D27154D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -37,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19437EE43BA8B4777CBD68788A784B2A /* CMUDict.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMUDict.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		282A17DBB685AF3E4CF2B2D6655FDA80 /* Pods-SwiftSyllables_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftSyllables_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2D4BA7064840DD844D97A8A8B24D9D2F /* Pods-SwiftSyllables_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftSyllables_Tests.modulemap"; sourceTree = "<group>"; };
 		2D5F82A2D1EA1BE58E60860C2C0DA91E /* Pods-SwiftSyllables_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftSyllables_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -73,13 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E7952E67168804036A892CB14AAA11E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8A0060C1A94EB11BF107FFAC15670F74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,7 +85,6 @@
 		48CCB05573479F9E849DD062D59884F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19437EE43BA8B4777CBD68788A784B2A /* CMUDict.bundle */,
 				99019D702A3FA3421F61050A7F9DF8D2 /* Pods_SwiftSyllables_Tests.framework */,
 				C7A6ADD05AED2E8863656B9CA2CBC018 /* SwiftSyllables.framework */,
 			);
@@ -263,7 +245,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0D217A34BB5F617949A7D9C6F07B0B87 /* PBXTargetDependency */,
 			);
 			name = SwiftSyllables;
 			productName = SwiftSyllables;
@@ -288,23 +269,6 @@
 			productReference = 99019D702A3FA3421F61050A7F9DF8D2 /* Pods_SwiftSyllables_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		72E9091BA683B7EAC46076C8BFAFB0FD /* SwiftSyllables-CMUDict */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 15FD04BE618E732167D04E97D8603803 /* Build configuration list for PBXNativeTarget "SwiftSyllables-CMUDict" */;
-			buildPhases = (
-				7561C6225480C8EA169D93BA8743699B /* Sources */,
-				4E7952E67168804036A892CB14AAA11E /* Frameworks */,
-				54F2C9955E868F88595E8EA003AA9E37 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SwiftSyllables-CMUDict";
-			productName = "SwiftSyllables-CMUDict";
-			productReference = 19437EE43BA8B4777CBD68788A784B2A /* CMUDict.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,7 +279,13 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					17E731E707186AC1F40D8E8E63689374 = {
+						DevelopmentTeam = CP838PN6ZU;
 						LastSwiftMigration = 1130;
+						ProvisioningStyle = Automatic;
+					};
+					2A66B077269D2B2D31BC8B71B3265C77 = {
+						DevelopmentTeam = CP838PN6ZU;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -334,7 +304,6 @@
 			targets = (
 				2A66B077269D2B2D31BC8B71B3265C77 /* Pods-SwiftSyllables_Tests */,
 				17E731E707186AC1F40D8E8E63689374 /* SwiftSyllables */,
-				72E9091BA683B7EAC46076C8BFAFB0FD /* SwiftSyllables-CMUDict */,
 			);
 		};
 /* End PBXProject section */
@@ -344,15 +313,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECA9F07FCBC41D09043C6610CD25F25 /* CMUDict.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54F2C9955E868F88595E8EA003AA9E37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50C14D4365E3359F78A3EEFD1C738999 /* cmudict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,22 +337,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7561C6225480C8EA169D93BA8743699B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0D217A34BB5F617949A7D9C6F07B0B87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SwiftSyllables-CMUDict";
-			target = 72E9091BA683B7EAC46076C8BFAFB0FD /* SwiftSyllables-CMUDict */;
-			targetProxy = 8FFDE8B25B9BEFF8FAA24EC370DFF14D /* PBXContainerItemProxy */;
-		};
 		6BBDD8DA8782FA22E8F476B343BC96D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftSyllables;
@@ -402,24 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2900EA75D460662BE156C27F5D0BC534 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853C64E457B043C1226239FF2249F3A6 /* SwiftSyllables.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftSyllables";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SwiftSyllables/ResourceBundle-CMUDict-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = CMUDict;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -478,12 +407,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 853C64E457B043C1226239FF2249F3A6 /* SwiftSyllables.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CP838PN6ZU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -497,6 +430,8 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftSyllables/SwiftSyllables.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftSyllables;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -569,12 +504,16 @@
 			baseConfigurationReference = F681CE302BAB3F8E838277BB13A5ADB7 /* Pods-SwiftSyllables_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CP838PN6ZU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -592,9 +531,11 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_SwiftSyllables_Tests;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -605,12 +546,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 853C64E457B043C1226239FF2249F3A6 /* SwiftSyllables.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CP838PN6ZU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -624,6 +569,8 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftSyllables/SwiftSyllables.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftSyllables;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -635,35 +582,21 @@
 			};
 			name = Debug;
 		};
-		EBDB9351C45F604211E702F21435A66C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853C64E457B043C1226239FF2249F3A6 /* SwiftSyllables.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftSyllables";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SwiftSyllables/ResourceBundle-CMUDict-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = CMUDict;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		EEF4A324052C23ADFBC2D2FC929EB1B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BDE5C5CDE07AC2FF8D8B99525DDAB6A /* Pods-SwiftSyllables_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CP838PN6ZU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -681,10 +614,12 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_SwiftSyllables_Tests;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -699,15 +634,6 @@
 			buildConfigurations = (
 				EEF4A324052C23ADFBC2D2FC929EB1B0 /* Debug */,
 				A351C339185FED353925552E8906529C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		15FD04BE618E732167D04E97D8603803 /* Build configuration list for PBXNativeTarget "SwiftSyllables-CMUDict" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EBDB9351C45F604211E702F21435A66C /* Debug */,
-				2900EA75D460662BE156C27F5D0BC534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
