@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftSyllables'
-  s.version          = '0.1.3'
+  s.version          = '0.1.5'
   s.summary          = 'A lightweight syllable counter written in Swift.'
 
   s.description      = <<-DESC
@@ -21,7 +21,7 @@ Simple syllable counter written in Swift using a combination of dictionary looku
   s.source           = { :git => 'https://github.com/vivqu/SwiftSyllables.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/vivqu'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.3'
 
   s.source_files = 'SwiftSyllables/Classes/**/*'
 
