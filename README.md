@@ -6,6 +6,10 @@
 
 A lightweight syllable counter written in Swift.
 
+⚠️ **To use with Swift 5.x please ensure you are using >= 0.1.6** ⚠️
+
+⚠️ **To use with Swift 4.x please ensure you are using = 0.1.5** ⚠️
+
 ## Background
 
 Syllable counting does not have a simple algorithmic solution so this framework takes a combination of dictionary lookups and heuristics, in two parts:
