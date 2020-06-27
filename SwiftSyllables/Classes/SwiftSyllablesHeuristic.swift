@@ -58,7 +58,7 @@ class SwiftSyllablesHeuristic {
             return nil
         }
         if let index = rangeForIndex(string, index: index) {
-            return string.substring(to: index)
+            return String(string[..<index])
         }
         return nil
     }
@@ -138,7 +138,7 @@ class SwiftSyllablesHeuristic {
         guard let first2CharsIndex = rangeForIndex(baseWord, index: 1) else { return 1 }
         guard let first2CharsSubstring = substringToIndex(baseWord, index: 2) else { return 1 }
         let first3CharsIndex : String.Index? = baseWord.index(first2CharsIndex, offsetBy: 1)
-        if first3CharsIndex != nil && (first2CharsSubstring == "bi" || baseWord.substring(to: first3CharsIndex!) == "tri") {
+        if first3CharsIndex != nil && (first2CharsSubstring == "bi" || String(baseWord[..<first3CharsIndex!]) == "tri") {
             syllables += isVowel(baseWord[first3CharsIndex!]) ? 1 : 0
         }
         
