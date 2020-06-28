@@ -22,7 +22,7 @@ The current most robust algorithmic solution to syllable counting is Frank Liang
 
 ## Requirements
 
-Uses Swift 3.0, run on Xcode 8.
+Uses Swift 5.0, run on Xcode 11+.
 
 ## Installation
 
