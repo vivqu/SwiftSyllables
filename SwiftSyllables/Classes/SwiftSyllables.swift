@@ -77,7 +77,10 @@ open class SwiftSyllables {
 
         // Tokenize the string and read from the corpus
         var countSyllables = 0
-        let taggedWords : [String] = self.validWords(string, scheme: convertFromNSLinguisticTagScheme(NSLinguisticTagScheme.tokenType))
+        // Strip apostrophes from words to check against dictionary properly
+        let sanitizedString: String = string.replacingOccurrences(of: "'",
+                                                                  with: "")
+        let taggedWords : [String] = self.validWords(sanitizedString, scheme: convertFromNSLinguisticTagScheme(NSLinguisticTagScheme.tokenType))
         for word : String in taggedWords {
             let upperCase = word.uppercased()
             if let syllables = syllableDict[upperCase] {
