@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftSyllables'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A lightweight syllable counter written in Swift.'
 
   s.description      = <<-DESC
