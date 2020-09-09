@@ -9,7 +9,7 @@
 import Foundation
 
 private class SwiftSyllablesHeuristicExceptions {
-    static let addSyllables : [String] = ["serious", "crucial", "brilliant"]
+    static let addSyllables : [String] = ["serious", "crucial", "brilliant", "peepee"]
     static let deleteSyllables: [String] = ["fortunately", "unfortunately"]
     static let coPrefixSingleSyllables: [String] = [
         "cool", "coach", "coat", "coal",
