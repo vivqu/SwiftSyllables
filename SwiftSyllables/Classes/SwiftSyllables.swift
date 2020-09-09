@@ -78,8 +78,13 @@ open class SwiftSyllables {
         // Tokenize the string and read from the corpus
         var countSyllables = 0
         // Strip apostrophes from words to check against dictionary properly
-        let sanitizedString: String = string.replacingOccurrences(of: "'",
-                                                                  with: "")
+        var sanitizedString = string
+        if string.contains("'") {
+            sanitizedString = sanitizedString.replacingOccurrences(of: "'", with: "")
+        }
+        if string.contains("’") {
+            sanitizedString = sanitizedString.replacingOccurrences(of: "’", with: "")
+        }
         let taggedWords : [String] = self.validWords(sanitizedString, scheme: convertFromNSLinguisticTagScheme(NSLinguisticTagScheme.tokenType))
         for word : String in taggedWords {
             let upperCase = word.uppercased()
