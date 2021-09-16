@@ -23,9 +23,9 @@ Simple syllable counter written in Swift using a combination of dictionary looku
 
   s.ios.deployment_target = '8.3'
 
-  s.source_files = 'SwiftSyllables/Classes/**/*'
+  s.source_files = 'Sources/SwiftSyllables/Classes/**/*'
 
-  s.resource_bundles = { 'CMUDict' => ['SwiftSyllables/Assets/**/cmudict'] }
+  s.resource_bundles = { 'CMUDict' => ['Sources/SwiftSyllables/Assets/**/cmudict'] }
   s.swift_versions = ['5.2']
 
 end

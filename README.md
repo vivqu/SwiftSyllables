@@ -26,11 +26,21 @@ Uses Swift 5.0, run on Xcode 11+.
 
 ## Installation
 
+### Cocoapods
+
 SwiftSyllables is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SwiftSyllables"
+```
+
+### Swift Package Manager
+
+Add the following to your project:
+
+```
+https://github.com/vivqu/SwiftSyllables
 ```
 
 ## Example

@@ -96,7 +96,8 @@
 			children = (
 				93852EE0664FE7BE2EF817E540AE0CF5 /* Classes */,
 			);
-			path = SwiftSyllables;
+			name = SwiftSyllables;
+			path = Sources/SwiftSyllables;
 			sourceTree = "<group>";
 		};
 		65466F01F6BF434C77B49839BA06CCE0 /* Pods-SwiftSyllables_Tests */ = {
@@ -208,7 +209,8 @@
 			children = (
 				76986A219EE0E814C306619953F14C14 /* Assets */,
 			);
-			path = SwiftSyllables;
+			name = SwiftSyllables;
+			path = Sources/SwiftSyllables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
